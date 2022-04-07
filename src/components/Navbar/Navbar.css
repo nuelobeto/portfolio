@@ -1,0 +1,43 @@
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 3%;
+  font-size: 1rem;
+  position: fixed;
+  background-color: white;
+  border: 1px solid black;
+  transition: top 0.3s;
+}
+
+#logo {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  font-size: 1em;
+}
+
+nav ul li {
+  margin-left: 35px;
+}
+
+#resume_btn {
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#menu_bar {
+  font-size: 1.7em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 20px;
+  }
+}
