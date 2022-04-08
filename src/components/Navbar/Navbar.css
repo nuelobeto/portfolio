@@ -6,8 +6,9 @@ nav {
   padding: 20px 3%;
   font-size: 1rem;
   position: fixed;
-  background-color: white;
-  border: 1px solid black;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px -10px rgb(218, 216, 216);
   transition: top 0.3s;
 }
 
@@ -18,11 +19,15 @@ nav {
 
 nav ul {
   display: flex;
-  font-size: 1em;
+  font-size: 0.94em;
 }
 
 nav ul li {
   margin-left: 35px;
+}
+
+.active {
+  color: red;
 }
 
 #resume_btn {

@@ -6,20 +6,27 @@ import SideNav from "../SideNav/SideNav";
 function Navbar() {
   const [viewportWidth, setviewPortWidth] = useState(window.innerWidth);
   const [openSideNav, setOpenSideNav] = useState(false);
-  const [hideNav, setHideNav] = useState(false);
+  const [active, setActive] = useState(null);
 
+  const links = ["About", "Projects", "Contact"];
+
+  // hide navbar on scroll
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-      setHideNav(true);
+      document.getElementById("navbar").style.top = "0";
+      document.getElementById("navbar").style.boxShadow =
+        "0 10px 30px -10px rgb(218, 216, 216)";
     } else {
-      setHideNav(false);
+      document.getElementById("navbar").style.top = "-73px";
+      document.getElementById("navbar").style.boxShadow = "none";
     }
     prevScrollpos = currentScrollPos;
   };
 
   useEffect(() => {
+    // track viewport width
     const handleResize = () => {
       setviewPortWidth(window.innerWidth);
     };
@@ -27,21 +34,31 @@ function Navbar() {
     window.addEventListener("resize", handleResize);
   }, [viewportWidth]);
 
+  // set active link
+  const handleLinkChange = (e, index) => {
+    e.stopPropagation();
+    setActive(index);
+  };
+
   return (
-    <nav style={{ top: !hideNav ? "-73px" : "0" }}>
-      <h3 id="logo">Nuel Obeto</h3>
+    <nav id="navbar">
+      <a href="#home">
+        <h3 id="logo">Nuel Obeto</h3>
+      </a>
 
       {viewportWidth > 768 ? (
-        <ul>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+        <ul id="links">
+          {links.map((link, index) => (
+            <li key={index}>
+              <a
+                href={`#${link.toLowerCase()}`}
+                className={index === active ? "active" : ""}
+                onClick={(e) => handleLinkChange(e, index)}
+              >
+                {link}
+              </a>
+            </li>
+          ))}
           <li>
             <a
               id="resume_btn"
