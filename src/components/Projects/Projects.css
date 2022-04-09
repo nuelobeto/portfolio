@@ -5,3 +5,19 @@
   justify-content: center;
   align-items: center;
 }
+
+.projects_content {
+  width: 80%;
+  max-width: 1000px;
+  border: 1px solid black;
+}
+
+.projects_content h2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, 1.77em);
+  white-space: nowrap;
+}
