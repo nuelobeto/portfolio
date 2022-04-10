@@ -16,14 +16,13 @@ function Projects() {
             </div>
 
             <div className="project_content">
-              <p className="featured_project">Featured Project</p>
               <h3 className="project_title">Project Title</h3>
               <p className="project_description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
                 in?
               </p>
               <ul className="tags">
-                <li>Vs Code</li>
+                <li>VSCode</li>
                 <li>React</li>
                 <li>Node</li>
               </ul>
@@ -46,14 +45,13 @@ function Projects() {
             </div>
 
             <div className="project_content">
-              <p className="featured_project">Featured Project</p>
               <h3 className="project_title">Project Title</h3>
               <p className="project_description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
                 in?
               </p>
               <ul className="tags">
-                <li>Vs Code</li>
+                <li>VSCode</li>
                 <li>React</li>
                 <li>Node</li>
               </ul>
@@ -76,14 +74,13 @@ function Projects() {
             </div>
 
             <div className="project_content">
-              <p className="featured_project">Featured Project</p>
               <h3 className="project_title">Project Title</h3>
               <p className="project_description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
                 in?
               </p>
               <ul className="tags">
-                <li>Vs Code</li>
+                <li>VSCode</li>
                 <li>React</li>
                 <li>Node</li>
               </ul>

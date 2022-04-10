@@ -29,14 +29,12 @@ a {
   padding: 100px 0;
 }
 
-.section_heading::after {
-  content: "";
-  display: block;
-  position: relative;
-  width: 300px;
-  height: 1px;
-  margin-left: 20px;
-  background-color: grey;
+.section_heading {
+  text-align: center;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(23px, 5vw, 1.77em);
+  white-space: nowrap;
 }
 
 @media (max-width: 1080px) {

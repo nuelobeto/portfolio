@@ -12,7 +12,7 @@ function Home() {
           interfaces and experiences.
         </p>
         <div>
-          <a href="#Projects">Check out my works</a>
+          <a href="#projects">Check out my works</a>
         </div>
       </div>
     </section>
