@@ -6,7 +6,8 @@ function Contact() {
       <div className="contact_content section">
         <h2 className="section_heading">Get In Touch</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, est.
+          I'm always open to meeting new people and discovering new
+          opportunities. Send me an email, let's connect!
         </p>
         <div className="contact_btn">
           <a href="mailto:nuelobeto@gmail.com">Say Hello</a>

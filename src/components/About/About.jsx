@@ -1,42 +1,39 @@
+import { useEffect, useState } from "react";
 import "./About.css";
-import aboutImg from "./images.png";
+import { urlFor, client } from "../../sanityClient";
 
 function About() {
+  const [about, setAbout] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "about"]';
+
+    client.fetch(query).then((data) => setAbout(data));
+  }, []);
   return (
     <section className="about" id="about">
       <div className="about_content section">
         <h2 className="section_heading">About Me</h2>
-        <div className="about_body">
-          <div className="about_body-left">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              vitae culpa amet! In officia quasi iure, necessitatibus cum
-              inventore voluptas?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              quisquam ipsa tempora adipisci vero? Esse.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              recusandae magni iure nemo sed architecto incidunt distinctio
-              voluptate dicta temporibus?
-            </p>
-            <p>Here are a few technologies I’ve been working with recently:</p>
-            <ul>
-              <li>JavaScript (ES6+)</li>
-              <li>React js</li>
-              <li>Node js</li>
-              <li>Sanity</li>
-              <li>Firebase</li>
-              <li>Solidity</li>
-              <li>Web3 js</li>
-            </ul>
+        {about.map((about, index) => (
+          <div className="about_body" key={index}>
+            <div className="about_body-left">
+              <p>{about.description1}</p>
+              <p>{about.description2}</p>
+              <p>{about.description3}</p>
+              <p>
+                Here are a few technologies I’ve been working with recently:
+              </p>
+              <ul key={index} className="tech_list">
+                {about.tags.map((tag, index) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="about_body-right">
+              <img src={urlFor(about.imgUrl)} alt="" />
+            </div>
           </div>
-          <div className="about_body-right">
-            <img src={aboutImg} alt="" />
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
