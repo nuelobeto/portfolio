@@ -10,6 +10,7 @@ html {
 
 :root {
   font-size: 18px;
+  --pryColor: rgb(27, 27, 27);
 }
 
 body {
@@ -23,6 +24,7 @@ li {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: var(--pryColor);
 }
 
 .section {
