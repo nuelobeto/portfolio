@@ -24,7 +24,7 @@ function Projects() {
           {projects.slice(0, numOfProjects).map((project, index) => (
             <li className="project" key={index}>
               <div className="project_img">
-                <a href={project.projectLink}>
+                <a href={project.projectLink} target="_blank" rel="noreferrer">
                   <img src={urlFor(project.imgUrl)} alt="" />
                 </a>
               </div>
@@ -38,10 +38,14 @@ function Projects() {
                   ))}
                 </ul>
                 <div className="links">
-                  <a href={project.codeLink}>
+                  <a href={project.codeLink} target="_blank" rel="noreferrer">
                     <FiGithub />
                   </a>
-                  <a href={project.projectLink}>
+                  <a
+                    href={project.projectLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FiExternalLink />
                   </a>
                 </div>

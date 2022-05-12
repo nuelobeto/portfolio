@@ -37,6 +37,10 @@ nav ul li {
   border-radius: 5px;
 }
 
+#resume_btn:hover {
+  background-color: rgba(27, 27, 27, 0.1);
+}
+
 #menu_bar {
   font-size: 1.7em;
   cursor: pointer;
