@@ -30,6 +30,7 @@
   transition: 0.3s;
   border-radius: 10px;
   cursor: pointer;
+  background-color: whitesmoke;
 }
 
 .project:hover {
@@ -49,7 +50,6 @@
 
 .project_content {
   padding: 6%;
-  background-color: whitesmoke;
   min-height: 226px;
   border-radius: 0 0 10px 10px;
 }
