@@ -62,7 +62,7 @@ function Navbar() {
           <li>
             <a
               id="resume_btn"
-              href="https://drive.google.com/file/d/1WMrKYAA4uQfs9iWfm5hhpQLvHRsRupyO/view?usp=sharing"
+              href="https://drive.google.com/file/d/1p4g9D0UsOF8FkmKvilp8jRm9uD1Ub14G/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
