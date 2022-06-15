@@ -16,7 +16,7 @@ function SideNav({ openSideNav, setOpenSideNav }) {
         <li id="resume" onClick={() => setOpenSideNav(!openSideNav)}>
           <a
             id="side-nav-resume_btn"
-            href="https://drive.google.com/file/d/1WMrKYAA4uQfs9iWfm5hhpQLvHRsRupyO/view?usp=sharing"
+            href="https://drive.google.com/file/d/1pCRi8ehw-f2nHP3dfy4y6LvCV8SwZruI/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
